@@ -5,9 +5,48 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .container {
+            display: flex;
+        }
+        .left, .right {
+            flex: 0 0 200px;
+            background: red;
+        }
+        .center {
+            flex: 1;
+        }
+        .father {
+            width: 200px;
+            height: 200px;
+            /* display: flex;
+            justify-content: center;
+            align-items: center; */
+            background: blue;
+            position: relative;
+        }
+        .son {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 100px;
+            height: 100px;
+            transform: translate(-50%, -50%);
+            background: red;
+        }
+    </style>
 </head>
 <body>
     <script src="./手写call、apply、bind函数.js"></script>
     <script src="./函数节流和函数防抖.js"></script>
+    <div class="container">
+        <div class="left">left</div>
+        <div class="center">center</div>
+        <div class="right">right</div>
+    </div>
+
+    <div class="father">
+        <div class="son"></div>
+    </div>
 </body>
 </html>
