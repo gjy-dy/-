@@ -9,25 +9,51 @@ window.addEventListener('mousemove', debounceRun)
 
 
 // 防抖
-function debounce(fn, delay) {
+// function debounce(fn, delay) {
+//     let timer
+//     return function() {
+//         if(timer) {
+//             clearTimeout(timer)
+//         }
+//         timer = setTimeout(() => {
+//             fn(...arguments)
+//         }, delay)
+//     }
+// }
+// // 节流
+// function throttle(fn, delay) {
+//     let timer
+//     return function () {
+//         if(timer) return
+//         timer = setTimeout(() => {
+//             fn(...arguments)
+//             timer = null
+//         }, delay)
+//     }
+// }
+
+
+// 防抖
+function debounce (fn, delay) {
     let timer
-    return function() {
+    return function () {
         if(timer) {
             clearTimeout(timer)
         }
         timer = setTimeout(() => {
             fn(...arguments)
-        }, delay)
-    }
+        }, delay);
+    } 
 }
+
 // 节流
-function throttle(fn, delay) {
+function throttle (fn, delay) {
     let timer
     return function () {
         if(timer) return
         timer = setTimeout(() => {
             fn(...arguments)
             timer = null
-        }, delay)
+        }, delay);
     }
 }

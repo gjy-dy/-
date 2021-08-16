@@ -25,13 +25,12 @@ console.log(result)
 
 function getValue(url) {
     let urlParam = url.split('?')[1]
-    let urlItemParams = urlParam.split('&')
+    let urlParamItems = urlParam.split('&')
 
     let arr = {}
     let value = {}
-
-    if(urlItemParams.length) {
-        urlItemParams.forEach((item, index) => {
+    if(urlParamItems.length) {
+        urlParamItems.forEach((item, index) => {
             arr[index] = item.split('=')
             value[arr[index][0]] = arr[index][1]
         })
